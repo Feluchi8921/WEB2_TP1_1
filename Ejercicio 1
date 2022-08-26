@@ -1,0 +1,30 @@
+<?php
+
+#1
+echo "Primera manera: <br>";
+echo "<ul>";
+for($i=0; $i<10; $i++){
+echo "<li>";
+echo "$i";
+echo "</li>";
+};
+echo "</ul>";
+
+#2
+echo "Segunda manera: <br>";
+echo "<ul>";
+for($i=0; $i<10; $i++){
+$cadena='<li>'.$i.'</li>';
+echo "$cadena";
+}
+echo "</ul>";
+
+#3
+echo "Tercer manera: <br>";
+echo "<ul>";
+for($i=0; $i<10; $i++){
+    $cadena="<li>$i</li>";
+    echo "$cadena";
+    }
+echo "</ul>";
+?>
