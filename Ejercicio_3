@@ -1,0 +1,22 @@
+<?php
+//print_r($_REQUEST); Imprimo el arreglo, request sirve tanto para post como get
+
+if(!empty($_POST)){ //si el arreglo no está vacío hago lo siguiente
+$nombre=$_POST['nombre'];
+echo"Nombre: $nombre <br>";
+$apellido=$_POST['apellido'];
+echo"Apellido: $apellido <br>";
+$edad=$_POST['edad'];
+echo"Edad: $edad <br>";
+}
+?>
+<form method="POST" action="03.php">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" value=""/>
+        <label>Apellido:</label>
+        <input type="text" name="apellido" value=""/>
+        <label>Edad:</label>
+        <input type="text" name="edad" value=""/>
+        <input type="submit" value="enviar">
+    </form>
+<a href="03.php">Volver al formulario</a>
