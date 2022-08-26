@@ -1,3 +1,4 @@
+-----------------HTML-------------------------
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,3 +29,37 @@
     </form>
 </body>
 </html>
+
+-------------------PHP--------------------------
+<?php
+//print_r($_REQUEST); para ver que es lo que trae (sirve para GET y POST)
+$numeroA=$_REQUEST['numeroA'];
+$numeroB=$_REQUEST['numeroB'];
+$operaciones=$_REQUEST['operaciones'];
+switch($operaciones){
+    case 'sumar':{
+        $resultado=$numeroA + $numeroB;
+        break;
+    }
+   
+    case 'restar':{
+        $resultado=$numeroA - $numeroB;
+        break;
+    }
+    case 'multiplicar':{
+        $resultado=$numeroA * $numeroB;
+        break;
+    }
+    case 'dividir':{
+        $resultado=$numeroA / $numeroB;
+        break;
+    }
+    default:{
+        echo "operacion indefinida";
+        break;
+    }
+}
+echo "El resultado es: $resultado <br><br>" ;
+
+?>
+<a href="ejercicio8.html">Volver a la calculadora</a>
