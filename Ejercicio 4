@@ -1,0 +1,24 @@
+<a href="ejercicio4.php?id=5">Ver los primeros 5 items</a>
+<?php 
+echo"<br><br>";
+?>
+<a href="ejercicio4.php?id=20">Ver los primeros 20 items</a>
+<?php 
+echo"<br><br>";
+?>
+<a href="ejercicio4.php?id=100">Ver los primeros 100 items</a>
+<?php 
+echo"<br><br>";
+?>
+<?php
+if(!empty($_GET['id'])){
+    $id=$_GET['id'];
+    echo"Mostrando los primeros $id elementos:";
+    echo "<ul>";
+    for($i=1; $i<=$id; $i++){
+        $cadena="<li>Item$i</li>";
+        echo "$cadena";
+        }
+    echo "</ul>";
+}
+?>
